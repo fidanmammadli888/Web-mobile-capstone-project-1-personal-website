@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Contact form">
+  <meta name="author" content="<Your Name>">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Me — <Your Name></title>
+  <link rel="icon" href="favicon.png" type="image/png">
+</head>
+<body>
+<header>
+  <h1>Contact Me</h1>
+  <nav>
+    <a href="index.html">Home</a> |
+    <a href="education.html">Education</a> |
+    <a href="schedule.html">Weekly Schedule</a> |
+    <a href="contact.html">Contact Me</a> 
+   
+  </nav>
+</header>
+
+<main>
+  <section>
+    <h2>Send a Message</h2>
+
+    <!-- Use mailto if allowed: action="mailto:your.email@example.com" -->
+    <form method="POST" action="mailto:your.email@example.com" enctype="text/plain" accept-charset="UTF-8">
+      <p>
+        <label for="name">Full Name:</label><br>
+        <input id="name" name="Full Name" type="text" required
+               pattern="[A-Za-zÀ-ÿ' -]{2,}"
+               title="Letters, spaces, apostrophes, and hyphens only (min 2 characters).">
+      </p>
+
+      <p>
+        <label for="email">Email:</label><br>
+        <input id="email" name="Email" type="email" required placeholder="you@example.com">
+      </p>
+
+      <p>
+        <label for="subject">Subject:</label><br>
+        <input id="subject" name="Subject" type="text" required>
+      </p>
+
+      <p>
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="Message" rows="5" cols="40" required></textarea>
+      </p>
+
+      <fieldset>
+        <legend>Contact Preference</legend>
+        <label><input type="radio" name="Preferred Contact" value="Email"> Email</label>
+        <label><input type="radio" name="Preferred Contact" value="Phone"> Phone</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Topics </legend>
+        <label><input type="checkbox" name="Topic: Web Projects" value="Yes"> Web Projects</label>
+        <label><input type="checkbox" name="Topic: Data" value="Yes"> Data</label>
+        <label><input type="checkbox" name="Topic: Events" value="Yes"> Events</label>
+      </fieldset>
+
+      <p>
+        <label for="role">Your Role (optional):</label><br>
+        <select id="role" name="Role">
+          <option value="">— Select —</option>
+          <option>Student</option>
+          <option>Instructor</option>
+          <option>Organizer</option>
+          <option>Other</option>
+        </select>
+      </p>
+
+      <p><button type="submit">Send</button></p>
+    </form>
+
+  </section>
+</main>
+
+<footer>
+  <p><a href="index.html">Back to Home</a></p>
+</footer>
+</body>
+</html>
